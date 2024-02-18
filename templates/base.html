@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../static/CSS/dist/style.css">
+    <title>{% block title %}Imaginex{% endblock %}</title>
 </head>
-<body>
-        <h1>Hello, World!</h1>
+<body class="bg-slate-950 overflow-y-scroll">
+        <!--Nav Bar Starts Here-->
+        <nav class="sticky top-0 z-50 flex justify-between items-center w-full h-20 bg-zinc-900 px-4 md:px-8 border-b-2 border-stone-400 shadow-lg shadow-stone-400">
+            <div class="text-3xl font-bold font-serif px-2 py-2 text-zinc-500 border-2 shadow-lg shadow-white border-slate-500 rounded-md">IMAGINEX</div>
+            <ul class="md:flex hidden font-semibold sm:hidden">
+                <li class="mx-[10px] cursor-pointer text-zinc-400 font-bold border-2 border-slate-700 px-2 py-2 rounded-xl hover:bg-zinc-500 hover:text-white hover:border-indigo-600"><a href="/">Home</a>
+                </li>
+                <li class="mx-[10px] cursor-pointer text-zinc-400 font-bold border-2 border-slate-700 px-2 py-2 rounded-xl hover:bg-zinc-500 hover:text-white hover:border-indigo-600"><a href="/search">Search</a></li>
+                <li class="mx-[10px] cursor-pointer text-zinc-400 font-bold border-2 border-slate-700 px-2 py-2 rounded-xl hover:bg-zinc-500 hover:text-white hover:border-indigo-600"><a href="#">History</a></li>
+                <li class="mx-[10px] cursor-pointer text-zinc-400 font-bold border-2 border-slate-700 px-2 py-2 rounded-xl hover:bg-zinc-500 hover:text-white hover:border-indigo-600"><a href="/about">About Us</a></li>
+                <li class="mx-[10px] cursor-pointer text-zinc-400 font-bold border-2 border-slate-700 px-2 py-2 rounded-xl hover:bg-zinc-500 hover:text-white hover:border-indigo-600"><a href="/contact">Contact Us</a></li>
+            </ul>
+            <ul class="md:flex hidden font-semibold sm:hidden">
+                <li class="mx-[10px] cursor-pointer text-zinc-400 font-bold border-2 border-slate-700 px-2 py-2 rounded-xl hover:bg-zinc-500 hover:text-white hover:border-indigo-600"><a href="#">Log-In</a></li>
+                <li class="mx-[10px] cursor-pointer text-zinc-400 font-bold border-2 border-slate-700 px-2 py-2 rounded-xl hover:bg-zinc-500 hover:text-white hover:border-indigo-600"><a href="#">Sign-Up</a></li>
+            </ul>
+            <div class="md:hidden">
+                <a class="text-4xl border-2 border-slate-700 px-2 py-2 rounded-xl" href="#">&#8801;</a>
+            </div>
+        </nav>
+        <!--Nav Bar Ends Here-->
+        {% block content %}
+        {% endblock %}
+        <!-- Footer -->
+        <footer class="w-full bg-gray-900 px-4 text-white pt-8 flex flex-col md:flex-row flex-wrap justify-between md:px-12">
+            <div>
+                <p>Emai Us</p>
+            </div>
+            <div>
+                <h2 class="font-bold text-2xl mt-4">Imaginex</h2>
+                <div class="w-36 h-1 border-b-4 border-yellow-400 mt-2 rounded-2xl md:mt-4 mb-12"></div>
+                <div class="mb-12">
+                    <p>About Us</p>
+                    <p>FAQS</p>
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>
